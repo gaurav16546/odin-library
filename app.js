@@ -9,6 +9,8 @@ function Book(title, author, pageNumber, read) {
 function addBookToLibrary(title, author, pageNumber, read = false) {
     const newBook = new Book(title, author, pageNumber, read);
     myLibrary.push(newBook);
+    showBooks(myLibrary);
+
 }
 addBookToLibrary('Harry Potter', "J k rowling", 200, false);
 addBookToLibrary("The Hobbit", "J R R Tolkien", 500, true);
@@ -28,7 +30,13 @@ function showBooks(myLibrary) {
         authorPara.textContent = `Author : ${boo.author}`;
         pageNumberPara.textContent = `Page : ${boo.pageNumber}`;
         boo.read ? readPara.textContent = "Status : read" : readPara.textContent = "Status : Not read";
-        bookShelf.append(titlePara, authorPara, pageNumberPara, readPara);
+        div.append(titlePara, authorPara, pageNumberPara, readPara);
     }
 }
-showBooks(myLibrary);
+
+function getBookInfo(event) {
+    addBookToLibrary(document.getElementById("title").value, document.getElementById("author").value, document.getElementById("page").value, document.querySelector('input[name = "read"]:checked').value);
+    event.preventDefault();
+}
+
+document.getElementById("submit-bottom").addEventListener('click', getBookInfo, false);
