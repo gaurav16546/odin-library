@@ -10,8 +10,36 @@
   <body>
     <div id="container">
       <h1>My Books</h1>
+      <div>+</div>
       <div id="book-shelf"></div>
     </div>
+    <form action="">
+      <label for="title"
+        >Title
+        <input type="text" name="title" id="title" />
+      </label>
+      <label for="author"
+        >Author
+        <input type="text" name="author" id="author" />
+      </label>
+      <label for="page"
+        >Pages
+        <input
+          type="number"
+          name="page"
+          id="page"
+          min="1"
+          inputmode="numeric"
+        />
+      </label>
+      <div>
+        <input type="radio" name="read" id="read" value="true" />
+        <label for="read">Read</label>
+        <input type="radio" name="read" id="not-read" value="false" checked />
+        <label for="not-read">Not read</label>
+      </div>
+      <button type="submit" id="submit-bottom">Submit</button>
+    </form>
     <script src="app.js"></script>
   </body>
 </html>
