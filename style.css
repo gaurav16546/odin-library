@@ -38,9 +38,27 @@ h1 + div {
   font-size: 1.2rem;
 }
 form {
-  /* display: none; */
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
+  display: none;
+  /* position: absolute; */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
   position: fixed;
+  height: fit-content;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+}
+form div {
+  padding: 5px;
+  padding-bottom: 10px;
+}
+label:nth-child(-n + 3) {
+  display: block;
+}
+form button {
+  text-align: center;
+  /* width: 100%; */
+  margin-left: 35%;
 }
