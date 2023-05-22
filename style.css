@@ -32,10 +32,15 @@ h1 + div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   column-gap: 25px;
+  row-gap: 15px;
 }
 .shelf {
   border: 1px solid black;
   font-size: 1.2rem;
+  padding: 5px;
+}
+.remove {
+  margin-right: 15px;
 }
 form {
   display: none;
