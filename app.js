@@ -1,12 +1,22 @@
 const apprun = () => {
     let myLibrary = [];
-    function Book(title, author, pageNumber, read) {
-        this.title = title;
-        this.author = author;
-        this.pageNumber = pageNumber;
-        this.read = read;
+    // class Book(title, author, pageNumber, read) {
+    //     // this.title = title;
+    //     // this.author = author;
+    //     // this.pageNumber = pageNumber;
+    //     // this.read = read;
+    //     constructor
 
+    // }
+    class Book {
+        constructor(title, author, pageNumber, read) {
+            this.title = title
+            this.author = author
+            this.pageNumber = pageNumber
+            this.read = read;
+        }
     }
+
     function addBookToLibrary(title, author, pageNumber, read) {
         const newBook = new Book(title, author, pageNumber, read);
         myLibrary.push(newBook);
